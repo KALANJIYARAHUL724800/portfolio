@@ -6,7 +6,7 @@ const FooterComponents = () => {
         <footer className="bg-dark text-light text-center py-4 mt-5">
             <div>
                 {/* Contact Info */}
-                <p>Email: kalanjuya@example.com | Phone: 8754859090</p>
+                <p>Email: kalanjiyarahul72480000@gmail.com | Phone: 8754859090</p>
 
                 {/* Social Links */}
                 <div className="mb-2">

@@ -25,8 +25,8 @@ function App() {
     <Router>
       <HeaderComponents />   {/* Header inside Router */}
       <Routes>
-        <Route path="/" element={<HeroComponent data={homeData}/>} />
-        <Route path="/home" element={<HeroComponent data={homeData}/>} />
+        <Route path="/" element={<HeroComponent />} />
+        <Route path="/home" element={<HeroComponent />} />
         <Route path="/about" element={<AboutComponent />} />
         <Route path="/projects" element={<ProjectComponents />} />
         <Route path="/skills" element={<SkillsComponent />} />

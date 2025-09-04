@@ -1,8 +1,7 @@
 import React from 'react';
 import { data } from 'react-router-dom';
 
-const HeroComponent = ({ data }) => {
-    console.log(data);
+const HeroComponent = () => {
     
     return (
         <section className="hero-section text-center py-5 bg-light">

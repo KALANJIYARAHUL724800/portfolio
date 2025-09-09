@@ -284,9 +284,21 @@ const HeroComponent = ({ data, page }) => {
                                 </span>
                             );
                         })}
-                        <div className='dflex m-4'>
-                            <img src="https://en.idei.club/uploads/posts/2023-05/thumbs/1685505186_en-idei-club-p-programming-motivation-dizain-krasivo-2.png" alt="motivational-image" style={{ borderRadius: "9px" }} />
+                        <div className='dflex m-4' style={{ width: "100%" }}>
+                            <img
+                                src="https://en.idei.club/uploads/posts/2023-05/thumbs/1685505186_en-idei-club-p-programming-motivation-dizain-krasivo-2.png"
+                                alt="motivational-image"
+                                style={{
+                                    width: "100%",
+                                    maxWidth: "600px", // optional, limits the max size
+                                    height: "auto",
+                                    borderRadius: "9px",
+                                    display: "block",
+                                    margin: "0 auto"
+                                }}
+                            />
                         </div>
+
                     </div>
                 )
             }

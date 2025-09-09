@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import profilePic from '../../assets/KALANJIYARAHUL - PASSPORT SIZE PHOTO.jpeg';
 import sendContactForm from '../Connection';
 import resumePdf from "../../media/kalanjiya rahul_cv.pdf";
-
+import skillsImage from "../../media/skills_image.png";
 const HeroComponent = ({ data, page }) => {
     if (!data) {
         console.log("data not loaded yet");
@@ -110,30 +110,14 @@ const HeroComponent = ({ data, page }) => {
                             Open Resume PDF
                         </a>
                     )}
-                    <br /><br /><br /><br /><br />
-                    <p>
-                        Programming & Core Skills: Core Java, Python <br />
+                    <div style={{ width: "100%", maxWidth: "1300px", margin: "0 auto" }}>
+                        <img
+                            src={skillsImage}
+                            alt="skills_image"
+                            style={{ width: "100%", height: "auto", display: "block" }}
+                        />
+                    </div>
 
-                        Frontend Development: HTML, CSS, JavaScript, jQuery, Select2.js <br />
-
-                        Backend Development: Java (JDK), Spring, Spring Boot, REST API <br />
-
-                        Databases: MySQL, PostgreSQL <br />
-
-                        Desktop Development: Swing, JavaFX (SceneBuilder) <br />
-
-                        Testing & API Tools: Postman <br />
-
-                        UI/Design Tools: Canva <br />
-
-                        Fullstack Development: <br />
-
-                        System Applications (Java, Swing, JavaFX) <br />
-
-                        Web Applications (Spring Boot, APIs, React/JS) <br />
-
-                        IDEs & Tools: VS Code, Eclipse, IntelliJ IDEA, STS Tool Suite <br />
-                    </p>
                 </>
             }
             {/* { Projects Page } */}
@@ -299,6 +283,9 @@ const HeroComponent = ({ data, page }) => {
                                 </span>
                             );
                         })}
+                        <div className='dflex m-4'>
+                            <img src="https://en.idei.club/uploads/posts/2023-05/thumbs/1685505186_en-idei-club-p-programming-motivation-dizain-krasivo-2.png" alt="motivational-image" style={{ borderRadius: "9px" }} />
+                        </div>
                     </div>
                 )
             }

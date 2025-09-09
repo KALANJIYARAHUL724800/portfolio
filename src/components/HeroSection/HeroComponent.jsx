@@ -106,12 +106,9 @@ const HeroComponent = ({ data, page }) => {
                     </button>
 
                     {pdfVisible && (
-                        <embed
-                            src={resumePdf}
-                            type="application/pdf"
-                            width="100%"
-                            height="600px"
-                        />
+                        <a href={resumePdf} target="_blank" rel="noopener noreferrer" className="btn btn-outline-primary">
+                            Open Resume PDF
+                        </a>
                     )}
                     <br /><br /><br /><br /><br />
                     <p>

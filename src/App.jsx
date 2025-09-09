@@ -11,26 +11,31 @@ import SkillsComponent from './components/SkillsSection/SkillsComponent';
 import ContactComponent from './components/ContactSection/ContactComponet';
 import { useEffect, useState } from 'react';
 import getHomeDetails from './components/HomeConnection';
+import PageNotFound from './components/PageNotFound';
 
 function App() {
   const [homeData, setHomeData] = useState(null); //home details
 
   useEffect(() => {
     getHomeDetails().then(data => {
-      setHomeData(data);
+      if (data.length > 0) {
+        const parsed = JSON.parse(data[0].contents);
+        setHomeData(parsed);
+      }
     });
-  }, []);
+  }, [data]);
 
   return (
     <Router>
       <HeaderComponents />   {/* Header inside Router */}
       <Routes>
-        <Route path="/" element={<HeroComponent />} />
-        <Route path="/home" element={<HeroComponent />} />
-        <Route path="/about" element={<AboutComponent />} />
-        <Route path="/projects" element={<ProjectComponents />} />
-        <Route path="/skills" element={<SkillsComponent />} />
-        <Route path="/contact" element={<ContactComponent />} />
+        <Route path="/" element={<HeroComponent data={homeData} page="home" />} />
+        <Route path="/home" element={<HeroComponent data={homeData} page="home" />} />
+        <Route path="/about" element={<HeroComponent data={homeData} page="about" />} />
+        <Route path="/skills" element={<HeroComponent data={homeData} page="skill" />} />
+        <Route path="/projects" element={<HeroComponent data={homeData} page="projects" />} />
+        <Route path="/contact" element={<HeroComponent data={homeData} page="contact" />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
       <FooterComponents />
     </Router>

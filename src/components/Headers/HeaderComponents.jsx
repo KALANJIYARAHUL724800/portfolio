@@ -49,7 +49,7 @@ const HeaderComponents = () => {
         <nav className="navbar bg-primary d-flex align-items-center justify-content-between px-3 sticky-top" data-bs-theme="dark">
             <a className="navbar-brand mb-0 h1" href="#">
                 <img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcfrZNFcNfb93YahdCfY0D3iPbtKL3rWhKOw&s"
+                    src="https://st2.depositphotos.com/3369547/10275/v/450/depositphotos_102759520-stock-illustration-development-and-software-design.jpg"
                     alt="portfolio-logo"
                     className='brock-image'
                     style={{ height: '50px' }}

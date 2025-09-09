@@ -110,6 +110,7 @@ const HeroComponent = ({ data, page }) => {
                             Open Resume PDF
                         </a>
                     )}
+                    <br /><br /><br />
                     <div style={{ width: "100%", maxWidth: "1300px", margin: "0 auto" }}>
                         <img
                             src={skillsImage}

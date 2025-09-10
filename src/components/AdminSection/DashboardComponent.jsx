@@ -13,25 +13,25 @@ const DashboardComponent = () => {
         })
     }, [])
     return (
-        <div className='container'>
-            <div className="row">
-                <div className="dflex">
-                    <table className='table table-bordered table-stripped hovered'>
-                        <thead>
-                            <tr>
-                                <th>Sno</th>
-                                <th>Sender Name</th>
-                                <th>Email</th>
-                                <th>Message</th>
+        <div className='container table-responsive'>
+            <div className="row table-responsive">
+                <div className="table-responsive">
+                    <table className='table table-bordered table-striped table-hover'>
+                        <thead className='table-responsive'>
+                            <tr className='table-responsive'>
+                                <th className='table-responsive'>Sno</th>
+                                <th className='table-responsive'>Sender Name</th>
+                                <th className='table-responsive'>Email</th>
+                                <th className='table-responsive'>Message</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody className='table-responsive'>
                             { data.map((val,index)=>{return(
-                                <tr key={index}>
-                                    <td>{val.id}</td>
-                                    <td>{val.userName}</td>
-                                    <td>{val.email}</td>
-                                    <td>{val.message}</td>
+                                <tr key={index} className='table-responsive'>
+                                    <td className='table-responsive'>{val.id}</td>
+                                    <td className='table-responsive'>{val.userName}</td>
+                                    <td className='table-responsive'>{val.email}</td>
+                                    <td className='table-responsive'>{val.message}</td>
                                 </tr>
                             )}) }
                         </tbody>

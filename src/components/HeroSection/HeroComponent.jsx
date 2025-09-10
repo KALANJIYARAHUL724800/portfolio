@@ -160,72 +160,55 @@ const HeroComponent = ({ data, page }) => {
 
                 </>
             }
-            {/* { Projects Page } */}
 
+            {/* { Projects Page } */}
             {
                 (data.pages[page]['items'] &&
-                    <section className="projects-section py-5 bg-light" id="projects">
-                        <div className="container text-center">
-                            <h2 className="mb-4">My Projects</h2>
-                            <div className="row">
-                                {data.pages[page]['items'].map((project, index) => (
-                                    <div key={index} className="col-md-4 mb-4">
-                                        <div className="card h-100 shadow-sm">
-                                            <div className="card-body">
-                                                <h5 className="card-title">{project.title}</h5>
-                                                <p className="card-text">{project.description}</p>
-                                                <p className="text-muted">Tech: {project.tech}</p>
-                                                <a href={project.link} className="btn btn-primary" target='_blank'>View Project</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </section>
-                )
-            }
-            {/* { Skill Page } */}
-            {
-                (data.pages[page][0]) &&
-                <section className="skills-section py-5 bg-light" id="skills">
                     <div className="container text-center">
-                        <h2 className="mb-4">My Skills</h2>
-                        <div className="row justify-content-center">
-                            {data.pages[page].map((skill, index) => (
-                                <div key={index} className="col-md-4 mb-3 text-start">
-                                    <h5>{skill.name}</h5>
-                                    <div className="progress" style={{ height: '20px' }}>
-                                        <div
-                                            className="progress-bar bg-primary"
-                                            role="progressbar"
-                                            style={{ width: `${skill.percentage}%` }}
-                                            aria-valuenow={skill.percentage}
-                                            aria-valuemin="0"
-                                            aria-valuemax="100"
-                                        >
-                                            {skill.percentage}%
+                        <h2 className="mb-4">My Projects</h2>
+                        <div className="row">
+                            {data.pages[page]['items'].map((project, index) => (
+                                <div key={index} className="col-md-4 mb-4">
+                                    <div className="card h-100 shadow-sm">
+                                        <div className="card-body">
+                                            <h5 className="card-title">{project.title}</h5>
+                                            <p className="card-text">{project.description}</p>
+                                            <p className="text-muted">Tech: {project.tech}</p>
+                                            <a href={project.link} className="btn btn-primary" target='_blank'>View Project</a>
                                         </div>
                                     </div>
                                 </div>
                             ))}
                         </div>
                     </div>
-                </section>
+                )
             }
-
-            {/* Social Media Links */}
-            <div className="mb-4">
-                <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="mx-2">
-                    <i className="bi bi-github" style={{ fontSize: '1.5rem' }}></i>
-                </a>
-                <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="mx-2">
-                    <i className="bi bi-linkedin" style={{ fontSize: '1.5rem' }}></i>
-                </a>
-                <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer" className="mx-2">
-                    <i className="bi bi-twitter" style={{ fontSize: '1.5rem' }}></i>
-                </a>
-            </div>
+            {/* { Skill Page } */}
+            {
+                (data.pages[page][0]) &&
+                <div className="container text-center">
+                    <h2 className="mb-4">My Skills</h2>
+                    <div className="row justify-content-center">
+                        {data.pages[page].map((skill, index) => (
+                            <div key={index} className="col-md-4 mb-3 text-start">
+                                <h5>{skill.name}</h5>
+                                <div className="progress" style={{ height: '20px' }}>
+                                    <div
+                                        className="progress-bar bg-primary"
+                                        role="progressbar"
+                                        style={{ width: `${skill.percentage}%` }}
+                                        aria-valuenow={skill.percentage}
+                                        aria-valuemin="0"
+                                        aria-valuemax="100"
+                                    >
+                                        {skill.percentage}%
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            }
 
             {/* { Contact Page } */}
             {
@@ -323,7 +306,7 @@ const HeroComponent = ({ data, page }) => {
                                 </span>
                             );
                         })}
-                        <div className="d-flex justify-content-center m-4">
+                        <div className="d-flex justify-content-center my-5">
                             <img
                                 src="https://en.idei.club/uploads/posts/2023-05/thumbs/1685505186_en-idei-club-p-programming-motivation-dizain-krasivo-2.png"
                                 alt="motivational-image"
@@ -332,16 +315,6 @@ const HeroComponent = ({ data, page }) => {
                         </div>
                     </div>
                 )
-            }
-
-
-            {/* Scroll Down Indicator */}
-
-            {
-                (data.pages[page]) &&
-                <div className="mt-5">
-                    <i className="bi bi-chevron-double-down" style={{ fontSize: '2rem' }}></i>
-                </div>
             }
         </section >
     );

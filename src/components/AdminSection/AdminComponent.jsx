@@ -3,7 +3,7 @@ import Connection from '../Connection';
 import { useNavigate } from 'react-router-dom';
 
 const AdminComponent = () => {
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
   const [data, setData] = useState({
     username: "",
     password: ""
@@ -15,14 +15,15 @@ const AdminComponent = () => {
       [name]: value
     })
   }
+  const [loading, setLoading] = useState(false);
   const formSubmit = (e) => {
     e.preventDefault();
+
     Connection.adminForm(data)
       .then(response => {
-        if(data.username == response.data.username && data.password == response.data.password)
-        {
+        if (data.username == response.data.username && data.password == response.data.password) {
           navigate("/dashboard-admin")
-            
+
         }
         setData({ username: '', password: '' }); // clear form
       })

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import profilePic from '../../assets/KALANJIYARAHUL - PASSPORT SIZE PHOTO.jpeg';
 import sendContactForm from '../Connection';
-import resumePdf from "../../media/kalanjiya rahul_cv.pdf";
+import resumePdf from "../../media/kalanjiyarahul_CV.pdf";
 import skillsImage from "../../media/skills_image.png";
 const HeroComponent = ({ data, page }) => {
     if (!data) {
@@ -117,6 +117,45 @@ const HeroComponent = ({ data, page }) => {
                             alt="skills_image"
                             style={{ width: "100%", height: "auto", display: "block" }}
                         />
+                    </div>
+                    <div className="container my-4">
+                        <h4 className="fw-bold border-bottom pb-2">Education</h4>
+
+                        <div className="mb-4">
+                            <div className="d-flex justify-content-between">
+                                <strong>Syed Ammal Arts and Science College</strong>
+                                <span>2022 – 2024</span>
+                            </div>
+                            <div>Master of Science in Computer Science – <b>7.21 CGPA</b></div>
+                            <div className="text-muted">
+                                Specialized in advanced programming, database systems, and software engineering.
+                                Gained hands-on experience in <b>Python, Java, Data Analytics</b> and worked on research-oriented academic projects.
+                            </div>
+                        </div>
+
+                        <div className="mb-4">
+                            <div className="d-flex justify-content-between">
+                                <strong>Caussanel College of Arts and Science</strong>
+                                <span>2018 – 2021</span>
+                            </div>
+                            <div>Bachelor of Science in Computer Science – <b>8.32 CGPA</b></div>
+                            <div className="text-muted">
+                                Built strong foundations in <b>Core Java, Python, MySQL</b> and web development.
+                                Completed academic project on <b>Android Java Call Blocker</b>, demonstrating problem-solving and practical implementation skills.
+                            </div>
+                        </div>
+
+                        <div>
+                            <div className="d-flex justify-content-between">
+                                <strong>Kairathul Jalaliya HSC School</strong>
+                                <span>2017 – 2018</span>
+                            </div>
+                            <div>HSC – <b>82.5%</b></div>
+                            <div className="text-muted">
+                                Focused on Computer Science stream, developing early interest in coding, logical problem solving,
+                                and technology fundamentals.
+                            </div>
+                        </div>
                     </div>
 
                 </>

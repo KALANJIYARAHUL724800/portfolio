@@ -175,7 +175,7 @@ const HeroComponent = ({ data, page }) => {
                                                 <h5 className="card-title">{project.title}</h5>
                                                 <p className="card-text">{project.description}</p>
                                                 <p className="text-muted">Tech: {project.tech}</p>
-                                                <a href={project.link} className="btn btn-primary">View Project</a>
+                                                <a href={project.link} className="btn btn-primary" target='_blank'>View Project</a>
                                             </div>
                                         </div>
                                     </div>

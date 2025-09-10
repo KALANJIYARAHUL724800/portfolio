@@ -9,6 +9,7 @@ import { useEffect, useState } from 'react';
 import getHomeDetails from './components/HomeConnection';
 import PageNotFound from './components/PageNotFound';
 import AdminComponent from './components/AdminSection/AdminComponent';
+import DashboardComponent from './components/AdminSection/DashboardComponent';
 
 function App() {
   const [homeData, setHomeData] = useState(null); //home details
@@ -32,6 +33,8 @@ function App() {
         <Route path="/skills" element={<HeroComponent data={homeData} page="skill" />} />
         <Route path="/projects" element={<HeroComponent data={homeData} page="projects" />} />
         <Route path="/contact" element={<HeroComponent data={homeData} page="contact" />} />
+        <Route path="/dashboard-admin" element={<DashboardComponent />} />
+        <Route path="/admin" element={<AdminComponent />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
       <FooterComponents />

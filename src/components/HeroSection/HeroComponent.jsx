@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import profilePic from '../../assets/KALANJIYARAHUL - PASSPORT SIZE PHOTO.jpeg';
-import sendContactForm from '../Connection';
+import Connection from '../Connection';
 import resumePdf from "../../media/kalanjiyarahul_CV.pdf";
 import skillsImage from "../../media/skills_image.png";
 const HeroComponent = ({ data, page }) => {
@@ -22,7 +22,7 @@ const HeroComponent = ({ data, page }) => {
     const handleFormSubmit = (e) => {
         e.preventDefault();
         setLoading(true);
-        sendContactForm(val)
+        Connection.sendContactForm(val)
             .then(response => {
                 alert("Message sent!");
                 setValue({ userName: '', email: '', message: '' }); // clear form

@@ -5,11 +5,10 @@ const DashboardComponent = () => {
     useEffect(() => {
         const contactDatas = Connection.contactAll();
         contactDatas.then((response) => {
-            console.log(response.data)
             setData(response.data)
 
         }).catch((err) => {
-            console.log("Data is not Found")
+            alert("Data is not Found")
         })
     }, [])
     return (

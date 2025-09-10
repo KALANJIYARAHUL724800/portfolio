@@ -5,13 +5,13 @@ import resumePdf from "../../media/kalanjiyarahul_CV.pdf";
 import skillsImage from "../../media/skills_image.png";
 const HeroComponent = ({ data, page }) => {
     if (!data) {
-        console.log("data not loaded yet");
         return <div className="d-flex justify-content-center align-items-center" style={{ minHeight: "100vh" }}>
             <div className="text-center">
                 <img
                     src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Loading_2.gif"
                     alt="Loading..."
                     style={{ width: "100px", height: "100px" }}
+                    className="img-fluid"
                 />
                 <p className="mt-3">Please wait...</p>
             </div>

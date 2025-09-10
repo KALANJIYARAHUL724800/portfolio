@@ -41,6 +41,7 @@ const HeroComponent = ({ data, page }) => {
                 setLoading(false); // hide loader after response
             });;
     };
+    const [loading, setLoading] = useState(false);
 
     const [pdfVisible, setPdfVisible] = useState(false);
 

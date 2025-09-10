@@ -47,7 +47,7 @@ const HeaderComponents = () => {
 
     return (
         <nav className="navbar bg-primary d-flex align-items-center justify-content-between px-3 sticky-top" data-bs-theme="dark">
-            <a className="navbar-brand mb-0 h1" href="#">
+            <a className="navbar-brand mb-0 h1" href="/admin">
                 <img
                     src="https://st2.depositphotos.com/3369547/10275/v/450/depositphotos_102759520-stock-illustration-development-and-software-design.jpg"
                     alt="portfolio-logo"

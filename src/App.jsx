@@ -8,6 +8,7 @@ import HeroComponent from './components/HeroSection/HeroComponent';
 import { useEffect, useState } from 'react';
 import getHomeDetails from './components/HomeConnection';
 import PageNotFound from './components/PageNotFound';
+import AdminComponent from './components/AdminSection/AdminComponent';
 
 function App() {
   const [homeData, setHomeData] = useState(null); //home details
@@ -35,6 +36,7 @@ function App() {
       </Routes>
       <FooterComponents />
     </Router>
+
   );
 }
 

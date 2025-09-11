@@ -20,6 +20,14 @@ const adminForm = (val) => {
   });
 };
 
+const getHomeDetails = () => {
+  return axios.get("https://backend-portfolio-6g6d.onrender.com/api/home", {
+    headers: {
+      Authorization: `Bearer ${localStorage.getItem("token")}`
+    }
+  });
+};
+
 const handleLogout = () => {
   localStorage.removeItem("token");
   window.location.href = "/home";
@@ -30,4 +38,4 @@ const contactAll = () => {
   return axios.get(`${CONTACT_URL}`);
 }
 
-export default { sendContactForm, adminForm, contactAll, handleLogout };
+export default { sendContactForm, adminForm, contactAll, handleLogout, getHomeDetails };

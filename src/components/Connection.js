@@ -24,10 +24,12 @@ const adminForm = (val) => {
   });
 };
 
-
-
 const contactAll = () => {
   return axios.get(`${CONTACT_URL}`);
 }
 
-export default { sendContactForm, adminForm, contactAll };
+const handleLogout = ()=>{
+  localStorage.removeItem("token");
+}
+
+export default { sendContactForm, adminForm, contactAll, handleLogout };

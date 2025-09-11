@@ -19,11 +19,16 @@ const AdminComponent = () => {
     e.preventDefault();
     Connection.adminForm(data)
       .then(response => {
-        if (data.username == response.data.username && data.password == response.data.password) {
-          alert("Successfully Login Admin..")
-          navigate("/dashboard-admin")
+         console.log(response.data)
+        if (response.data.token) {
+          localStorage.setItem("token", response.data.token);
+          
+          alert("Successfully Login Admin..");
+          navigate("/dashboard-admin");
+        } else {
+          alert("Invalid login credentials");
         }
-        setData({ username: '', password: '' }); 
+        setData({ username: '', password: '' });
       })
       .catch(error => {
         alert("Failed to send message");

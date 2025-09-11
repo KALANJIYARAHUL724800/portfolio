@@ -25,16 +25,21 @@ const DashboardComponent = () => {
                             </tr>
                         </thead>
                         <tbody className='table-responsive'>
-                            { data.map((val,index)=>{return(
-                                <tr key={index} className='table-responsive'>
-                                    <td className='table-responsive'>{val.id}</td>
-                                    <td className='table-responsive'>{val.userName}</td>
-                                    <td className='table-responsive'>{val.email}</td>
-                                    <td className='table-responsive'>{val.message}</td>
-                                </tr>
-                            )}) }
+                            {data.map((val, index) => {
+                                return (
+                                    <tr key={index} className='table-responsive'>
+                                        <td className='table-responsive'>{val.id}</td>
+                                        <td className='table-responsive'>{val.userName}</td>
+                                        <td className='table-responsive'>{val.email}</td>
+                                        <td className='table-responsive'>{val.message}</td>
+                                    </tr>
+                                )
+                            })}
                         </tbody>
                     </table>
+                    <div className='d-flex justify-content-center'>
+                        <button className='btn btn-danger' onClick={Connection.handleLogout}>Logout</button>
+                    </div>
                 </div>
             </div>
         </div>

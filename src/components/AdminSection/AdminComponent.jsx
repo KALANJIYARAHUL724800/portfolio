@@ -16,22 +16,25 @@ const AdminComponent = () => {
       [name]: value
     })
   }
-var isData = true;
   const formSubmit = (e) => {
     e.preventDefault();
+    setLoading(true);
     Connection.adminForm(data)
       .then(response => {
         setLoading(false);
+        console.log(response.data)
         if (response.data.token) {
 
           alert("Successfully Login Admin..");
           navigate("/dashboard-admin");
         } else {
+          setLoading(false);
           alert("Invalid login credentials");
         }
         setData({ username: '', password: '' });
       })
       .catch(error => {
+        setLoading(false);
         alert("Failed to send message");
         setData({ username: '', password: '' });
       });
@@ -49,7 +52,7 @@ var isData = true;
             />
             <p className="mt-3">Please wait...</p>
           </div>
-        ) }
+        )}
         <form className="form text-center p-4 shadow rounded bg-light" onSubmit={formSubmit}>
           <label htmlFor="username" className="form-label">Admin Name</label>
           <input

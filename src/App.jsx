@@ -34,7 +34,7 @@ function App() {
         <Route path="/skills" element={<HeroComponent data={homeData} page="skill" />} />
         <Route path="/projects" element={<HeroComponent data={homeData} page="projects" />} />
         <Route path="/contact" element={<HeroComponent data={homeData} page="contact" />} />
-        <Route path="/dashboard-admin" element={<DashboardComponent />} />
+        <Route path="/dashboard-admin" element={<PrivateRoute><DashboardComponent /></PrivateRoute>} />
         < Route path="/admin" element={<AdminComponent />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>

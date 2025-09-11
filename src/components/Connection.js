@@ -17,8 +17,13 @@ const adminForm = (val) => {
   return axios.post(`${ADMIN_URL}`, {
     username: val.username,
     password: val.password
+  }).then(res => {
+    const token = res.data.token; // backend return JWT
+    localStorage.setItem("token", token); // save token
+    return res;
   });
 };
+
 
 
 const contactAll = () => {

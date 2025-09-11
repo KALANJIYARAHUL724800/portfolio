@@ -19,7 +19,6 @@ const AdminComponent = () => {
     e.preventDefault();
     Connection.adminForm(data)
       .then(response => {
-        console.log(response.data)
         if (response.data.token) {
         
           alert("Successfully Login Admin..");

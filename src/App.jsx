@@ -11,18 +11,27 @@ import PageNotFound from './components/PageNotFound';
 import AdminComponent from './components/AdminSection/AdminComponent';
 import DashboardComponent from './components/AdminSection/DashboardComponent';
 import PrivateRoute from './components/PrivateRoute';
-
+import Connection from './components/Connection';
 function App() {
   const [homeData, setHomeData] = useState(null); //home details
 
+  // useEffect(() => {
+  //   getHomeDetails().then(data => {
+  //     if (data.length > 0) {
+  //       const parsed = JSON.parse(data[0].contents);
+  //       setHomeData(parsed);
+  //     }
+  //   });
+  // }, [data]);
   useEffect(() => {
-    getHomeDetails().then(data => {
+    Connection.getHomeDetails().then(response => {
+      const data = response.data;  // Axios response object
       if (data.length > 0) {
         const parsed = JSON.parse(data[0].contents);
         setHomeData(parsed);
       }
-    });
-  }, [data]);
+    }).catch(err => console.log(err));
+  }, []);
 
   return (
     <Router>

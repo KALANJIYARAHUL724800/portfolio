@@ -66,7 +66,7 @@ const AdminComponent = () => {
             onChange={handleChange}
           />
           <button className="btn btn-success w-100" type="submit">Submit</button>
-        </form>
+        </form><br />
         {loading && (
           <div className="text-center">
             <img

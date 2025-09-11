@@ -19,9 +19,9 @@ const AdminComponent = () => {
     e.preventDefault();
     Connection.adminForm(data)
       .then(response => {
+        console.log(response.data)
         if (response.data.token) {
-          localStorage.setItem("token", response.data.token);
-          
+        
           alert("Successfully Login Admin..");
           navigate("/dashboard-admin");
         } else {

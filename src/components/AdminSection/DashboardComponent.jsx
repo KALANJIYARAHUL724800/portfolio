@@ -37,9 +37,6 @@ const DashboardComponent = () => {
                             })}
                         </tbody>
                     </table>
-                    <div className='d-flex justify-content-center'>
-                        <button className='btn btn-danger' onClick={Connection.handleLogout}>Logout</button>
-                    </div>
                 </div>
             </div>
         </div>

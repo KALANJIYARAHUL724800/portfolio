@@ -11,40 +11,31 @@ import PageNotFound from './components/PageNotFound';
 import AdminComponent from './components/AdminSection/AdminComponent';
 import DashboardComponent from './components/AdminSection/DashboardComponent';
 import PrivateRoute from './components/PrivateRoute';
-import Connection from './components/Connection';
+
 function App() {
   const [homeData, setHomeData] = useState(null); //home details
 
-  // useEffect(() => {
-  //   getHomeDetails().then(data => {
-  //     if (data.length > 0) {
-  //       const parsed = JSON.parse(data[0].contents);
-  //       setHomeData(parsed);
-  //     }
-  //   });
-  // }, [data]);
   useEffect(() => {
-    Connection.getHomeDetails().then(response => {
-      const data = response.data;  // Axios response object
+    getHomeDetails().then(data => {
       if (data.length > 0) {
         const parsed = JSON.parse(data[0].contents);
         setHomeData(parsed);
       }
-    }).catch(err => console.log(err));
+    });
   }, []);
-
+ 
   return (
     <Router>
       <HeaderComponents />   {/* Header inside Router */}
       <Routes>
-        <Route path="/" element={<HeroComponent data={homeData} page="home" />} />
+       <Route path="/" element={<HeroComponent data={homeData} page="home" />} />
         <Route path="/home" element={<HeroComponent data={homeData} page="home" />} />
         <Route path="/about" element={<HeroComponent data={homeData} page="about" />} />
         <Route path="/skills" element={<HeroComponent data={homeData} page="skill" />} />
         <Route path="/projects" element={<HeroComponent data={homeData} page="projects" />} />
         <Route path="/contact" element={<HeroComponent data={homeData} page="contact" />} />
-        <Route path="/dashboard-admin" element={<PrivateRoute><DashboardComponent /></PrivateRoute>} />
-        <Route path="/admin" element={<AdminComponent />} />
+        <Route path="/dashboard-admin" element={<DashboardComponent />} />
+        < Route path="/admin" element={<AdminComponent />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
       <FooterComponents />

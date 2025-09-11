@@ -59,6 +59,7 @@ const AdminComponent = () => {
             id="username"
             placeholder="Enter the name"
             className="form-control mb-3"
+            required
             value={data.username}
             onChange={handleChange}
           />
@@ -70,6 +71,7 @@ const AdminComponent = () => {
             id="password"
             placeholder="Enter the password"
             className="form-control mb-3"
+            required
             value={data.password}
             onChange={handleChange}
           />

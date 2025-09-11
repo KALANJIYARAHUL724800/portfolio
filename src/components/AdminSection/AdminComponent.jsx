@@ -41,17 +41,6 @@ const AdminComponent = () => {
   return (
     <div className="container d-flex justify-content-center align-items-center my-5">
       <div className="col-md-4">
-        {loading && (
-          <div className="text-center">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Loading_2.gif"
-              alt="Loading..."
-              style={{ width: '90px', height: '90px' }}
-              className="img-fluid"
-            />
-            <p className="mt-3">Please wait...</p>
-          </div>
-        )}
         <form className="form text-center p-4 shadow rounded bg-light" onSubmit={formSubmit}>
           <label htmlFor="username" className="form-label">Admin Name</label>
           <input
@@ -78,6 +67,17 @@ const AdminComponent = () => {
           />
           <button className="btn btn-success w-100" type="submit">Submit</button>
         </form>
+        {loading && (
+          <div className="text-center">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Loading_2.gif"
+              alt="Loading..."
+              style={{ width: '90px', height: '90px' }}
+              className="img-fluid"
+            />
+            <p className="mt-3">Please wait...</p>
+          </div>
+        )}
       </div>
     </div>
   )

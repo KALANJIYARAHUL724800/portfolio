@@ -315,14 +315,36 @@ const HeroComponent = ({ data, page }) => {
                                 </span>
                             );
                         })}
-                        <div className="d-flex justify-content-center my-5">
-                            <img
-                                src="https://en.idei.club/uploads/posts/2023-05/thumbs/1685505186_en-idei-club-p-programming-motivation-dizain-krasivo-2.png"
-                                alt="motivational-image"
-                                className="img-fluid rounded"
-                            />
+                        <div className="container my-5">
+                            <div className="d-flex justify-content-center mb-4">
+                                <img
+                                    src="https://en.idei.club/uploads/posts/2023-05/thumbs/1685505186_en-idei-club-p-programming-motivation-dizain-krasivo-2.png"
+                                    alt="motivational-image"
+                                    className="img-fluid rounded"
+                                />
+                            </div>
+                            <div className="container my-5">
+                                {/* Headline centered */}
+                                <div className="text-center mb-4">
+                                    <h2 className="fw-bold text-dark">Certifications</h2>
+                                    <hr className="mx-auto" style={{ width: "50px", borderTop: "3px solid #3498db" }} />
+                                </div>
+
+                                {/* Left-aligned list, centered in page */}
+                                <div className="mx-auto" style={{ maxWidth: "600px" }}>
+                                    <ul className="list-unstyled text-start">
+                                        <li><img src="https://cdn-icons-png.flaticon.com/128/6703/6703900.png" alt="certificate-image" style={{height:"30px", padding:"5px"}} className='image-fluid' /> Junior Typewriting (English) – First Class</li>
+                                        <li><img src="https://cdn-icons-png.flaticon.com/128/6703/6703900.png" alt="certificate-image" style={{height:"30px", padding:"5px"}} className='image-fluid' /> Prathmic Hindi – First Class</li>
+                                        <li><img src="https://cdn-icons-png.flaticon.com/128/6703/6703900.png" alt="certificate-image" style={{height:"30px", padding:"5px"}} className='image-fluid' /> Adobe Flash – 'A' Grade</li>
+                                        <li><img src="https://cdn-icons-png.flaticon.com/128/6703/6703900.png" alt="certificate-image" style={{height:"30px", padding:"5px"}} className='image-fluid' /> Seminar Activities – Participated in Syed Ammal College Conference</li>
+                                        <li><img src="https://cdn-icons-png.flaticon.com/128/6703/6703900.png" alt="certificate-image" style={{height:"30px", padding:"5px"}} className='image-fluid' /> Blood Donation – Actively participated in blood donation drives</li>
+                                    </ul>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
+
                 )
             }
         </section >

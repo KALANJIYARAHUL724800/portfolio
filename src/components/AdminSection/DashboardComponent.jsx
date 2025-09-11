@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import 'bootstrap-icons/font/bootstrap-icons.css';
 import Connection from '../Connection'
 const DashboardComponent = () => {
     const [data, setData] = useState([]);
@@ -12,36 +13,39 @@ const DashboardComponent = () => {
         })
     }, [])
     return (
-        <div className='container table-responsive'>
-            <div className="row table-responsive">
-                <div className="table-responsive">
-                    <table className='table table-bordered table-striped table-hover'>
-                        <thead className='table-responsive'>
-                            <tr className='table-responsive'>
-                                <th className='table-responsive'>Sno</th>
-                                <th className='table-responsive'>Sender Name</th>
-                                <th className='table-responsive'>Email</th>
-                                <th className='table-responsive'>Message</th>
+        <div className='container my-4'>
+            <div className="table-responsive">
+                <table className='table table-bordered table-striped table-hover'>
+                    <thead>
+                        <tr>
+                            <th>Sno</th>
+                            <th>Sender Name</th>
+                            <th>Email</th>
+                            <th>Message</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {data.map((val, index) => (
+                            <tr key={index}>
+                                <td>{val.id}</td>
+                                <td>{val.userName}</td>
+                                <td>{val.email}</td>
+                                <td>{val.message}</td>
                             </tr>
-                        </thead>
-                        <tbody className='table-responsive'>
-                            {data.map((val, index) => {
-                                return (
-                                    <tr key={index} className='table-responsive'>
-                                        <td className='table-responsive'>{val.id}</td>
-                                        <td className='table-responsive'>{val.userName}</td>
-                                        <td className='table-responsive'>{val.email}</td>
-                                        <td className='table-responsive'>{val.message}</td>
-                                    </tr>
-                                )
-                            })}
-                        </tbody>
-                    </table>
-                    <div className='d-flex justify-content-center'>
-                        <button className='btn btn-danger' onClick={Connection.handleLogout}>Logout</button>
-                    </div>
-                </div>
+                        ))}
+                    </tbody>
+                </table>
             </div>
+
+            <div className="d-flex justify-content-center mt-4">
+                <button
+                    className="btn btn-danger"  // normal red button
+                    onClick={Connection.handleLogout}
+                >
+                    <i className="bi bi-box-arrow-right me-2"></i> Logout
+                </button>
+            </div>
+
         </div>
     )
 }

@@ -30,6 +30,7 @@ const contactAll = () => {
 
 const handleLogout = ()=>{
   localStorage.removeItem("token");
+  window.location.href = "/home";
 }
 
 export default { sendContactForm, adminForm, contactAll, handleLogout };

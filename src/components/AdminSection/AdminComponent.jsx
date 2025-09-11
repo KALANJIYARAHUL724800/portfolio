@@ -16,10 +16,9 @@ const AdminComponent = () => {
       [name]: value
     })
   }
-
+var isData = true;
   const formSubmit = (e) => {
     e.preventDefault();
-    setLoading(true);
     Connection.adminForm(data)
       .then(response => {
         setLoading(false);

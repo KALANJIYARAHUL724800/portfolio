@@ -22,7 +22,6 @@ const AdminComponent = () => {
     Connection.adminForm(data)
       .then(response => {
         setLoading(false);
-        console.log(response.data)
         if (response.data.token) {
 
           alert("Successfully Login Admin..");

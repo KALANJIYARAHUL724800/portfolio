@@ -62,6 +62,8 @@ const AdminComponent = () => {
             placeholder="Enter the password"
             className="form-control mb-3"
             required
+            minLength={8}
+            maxLength={16}
             value={data.password}
             onChange={handleChange}
           />

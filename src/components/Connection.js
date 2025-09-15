@@ -1,8 +1,8 @@
 // Connection.js
 import axios from "axios";
 
-const CONTACT_URL = "https://backend-portfolio-6g6d.onrender.com/api/contact"; // insert the contact API endpoint
-const ADMIN_URL = "https://backend-portfolio-6g6d.onrender.com/api/admin";//https://backend-portfolio-6g6d.onrender.com/api/admin
+const CONTACT_URL = "https://backend-0gnm.onrender.com/api/contact"; // insert the contact API endpoint
+const ADMIN_URL = "https://backend-0gnm.onrender.com/api/admin";//https://backend-portfolio-6g6d.onrender.com/api/admin
 //Contact Data send
 const sendContactForm = (val) => {
   return axios.post(`${CONTACT_URL}`, {

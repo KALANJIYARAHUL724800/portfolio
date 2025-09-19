@@ -23,7 +23,7 @@ const HeroComponent = ({ data, page }) => {
         message: ''
     });
     useEffect(() => {
-        document.title = "Contact - Portfolio";
+        document.title = "Kalanjiyarahul - Portfolio";
     }, []);
 
 

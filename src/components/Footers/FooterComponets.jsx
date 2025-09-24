@@ -12,7 +12,7 @@ const FooterComponents = () => {
                 <div className="mb-2">
                     <a href="https://www.linkedin.com/in/kalanjiya-rahul-16b848386" target="_blank" className="text-light me-3">LinkedIn</a>
                     <a href="https://github.com/KALANJIYARAHUL724800/" target="_blank" className="text-light me-3">GitHub</a>
-                    <a href="https://x.com/Kalanjiyarahul" className="text-light">Twitter</a>
+                    <a href="https://x.com/Kalanjiyarahul" target='blank' className="text-light">Twitter</a>
                 </div>
 
                 {/* Copyright */}

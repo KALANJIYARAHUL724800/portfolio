@@ -40,7 +40,6 @@ const HeaderComponents = () => {
             link.rel = 'icon';
             document.head.appendChild(link);
         }
-        // link.href = 'https://cdn-icons-png.flaticon.com/128/5974/5974636.png';
         link.href = faviconMap[active] || faviconMap['/'];
 
     }, [active]);

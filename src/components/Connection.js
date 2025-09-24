@@ -1,4 +1,3 @@
-// Connection.js
 import axios from "axios";
 
 const CONTACT_URL = "https://backend-0gnm.onrender.com/api/contact"; // insert the contact API endpoint
